@@ -65,6 +65,9 @@ export default class BroadcastView extends Component {
   };
 
   _onBroadcastStop = (event) => {
+    if(Platform.OS == 'android'){
+      BroadcastManager.stopTimer();
+    }
     if (this.props.onBroadcastStop) {
       this.props.onBroadcastStop(event.nativeEvent);
     }
