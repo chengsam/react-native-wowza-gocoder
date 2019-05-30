@@ -51,6 +51,9 @@ static BroadcastManager *sharedMyManager = nil;
     
     
     WowzaConfig *config = [[WowzaConfig alloc] initWithPreset:sizePreset];
+    config.videoFrameRate = 30;
+    config.videoKeyFrameInterval = 30;
+    config.videoBitrate = 1000000;
     config.hostAddress = hostAddress;
     config.portNumber = 1935;
     if(port){
