@@ -27,7 +27,7 @@ export default class BroadcastView extends Component {
 
   _onBroadcastStart = (event) => {
     if(Platform.OS == 'android'){
-      BroadcastManager.startTimer(1.1, 3600);
+      BroadcastManager.startTimer(1, 3600);
     }
     if (this.props.onBroadcastStart) {
       this.props.onBroadcastStart(event.nativeEvent);
