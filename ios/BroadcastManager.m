@@ -119,7 +119,7 @@ static BroadcastManager *sharedMyManager = nil;
 //        return WOWZBroadcastOrientationAlwaysPortrait;
 //    }
   
-    return WOWZBroadcastOrientationSameAsDevice;
+    return WOWZBroadcastOrientationAlwaysPortrait;
 }
 
 @end

@@ -107,7 +107,7 @@ public class BroadcastManager {
 //            case "portrait":
 //                return WOWZMediaConfig.ALWAYS_PORTRAIT;
 //            default:
-                return WOWZMediaConfig.SAME_AS_SOURCE;
+                return WOWZMediaConfig.ALWAYS_PORTRAIT;
 //        }
     }
 }
