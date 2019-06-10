@@ -1,5 +1,6 @@
 package com.rngocoder;
 
+import android.media.MediaRecorder;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
@@ -72,6 +73,7 @@ public class BroadcastView extends FrameLayout implements LifecycleEventListener
         localContext = context;
         mEventEmitter = localContext.getJSModule(RCTEventEmitter.class);
         audioDevice = new WOWZAudioDevice();
+        audioDevice.setAudioSource(MediaRecorder.AudioSource.VOICE_COMMUNICATION);
         cameraView = new WOWZCameraView(context);
         broadcast = new WOWZBroadcast();
         localContext.addLifecycleEventListener(this);
