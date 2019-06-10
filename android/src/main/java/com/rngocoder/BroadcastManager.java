@@ -23,6 +23,7 @@ public class BroadcastManager {
 
         WOWZMediaConfig mediaConfig = getSizePresetWithInt(sizePreset);
         broadcastConfig.setVideoSourceConfig(mediaConfig);
+        broadcastConfig.setVideoFrameSize(720, 1280);
         broadcastConfig.setVideoFramerate(30);
         broadcastConfig.setVideoKeyFrameInterval(30);
         broadcastConfig.setVideoBitRate(1000);
