@@ -13,6 +13,7 @@ import com.wowza.gocoder.sdk.api.broadcast.WOWZBroadcast;
 import com.wowza.gocoder.sdk.api.broadcast.WOWZBroadcastConfig;
 import com.wowza.gocoder.sdk.api.devices.WOWZAudioDevice;
 import com.wowza.gocoder.sdk.api.devices.WOWZCameraView;
+import com.wowza.gocoder.sdk.api.geometry.WOWZSize;
 import com.wowza.gocoder.sdk.api.status.WOWZState;
 import com.wowza.gocoder.sdk.api.status.WOWZStatus;
 import com.wowza.gocoder.sdk.api.status.WOWZStatusCallback;
@@ -79,6 +80,7 @@ public class BroadcastView extends FrameLayout implements LifecycleEventListener
         localContext.addLifecycleEventListener(this);
         cameraView.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         cameraView.getCamera().setTorchOn(false);
+        cameraView.setFrameSize(new WOWZSize(720, 1280));
         this.addView(cameraView);
     }
 
