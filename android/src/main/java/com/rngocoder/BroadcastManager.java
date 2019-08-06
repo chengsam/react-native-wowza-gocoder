@@ -19,13 +19,12 @@ public class BroadcastManager {
         WowzaGoCoder.init(localContext, sdkLicenseKey);
         WOWZBroadcastConfig broadcastConfig = new WOWZBroadcastConfig();
         broadcastConfig.setOrientationBehavior(getOrientationBehavior(videoOrientation));
-        broadcastConfig.setVideoFramerate(12);
 
         WOWZMediaConfig mediaConfig = getSizePresetWithInt(sizePreset);
         broadcastConfig.setVideoSourceConfig(mediaConfig);
         broadcastConfig.setVideoFrameSize(720, 1280);
-        broadcastConfig.setVideoFramerate(30);
-        broadcastConfig.setVideoKeyFrameInterval(30);
+        broadcastConfig.setVideoFramerate(24);
+        broadcastConfig.setVideoKeyFrameInterval(24);
         broadcastConfig.setVideoBitRate(1000);
 
         broadcastConfig.setVideoBroadcaster(cameraView);
