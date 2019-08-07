@@ -60,6 +60,7 @@ public class BroadcastView extends FrameLayout implements LifecycleEventListener
     private String broadcastName;
     private String username;
     private String password;
+    private int bitrate;
     private String videoOrientation;
     private RCTEventEmitter mEventEmitter;
     private boolean broadcasting = false;
@@ -193,6 +194,14 @@ public class BroadcastView extends FrameLayout implements LifecycleEventListener
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getBitrate() {
+        return bitrate;
+    }
+
+    public void setBitrate(int bitrate) {
+        this.bitrate = bitrate;
     }
 
     public String getVideoOrientation() { return videoOrientation; }

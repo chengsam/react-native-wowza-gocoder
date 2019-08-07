@@ -27,6 +27,7 @@ public class RCTBroadcastView extends ViewGroupManager<BroadcastView>  {
     private static final String PROP_VIDEO_ORIENTATION = "videoOrientation";
     private static final String PROP_USERNAME = "username";
     private static final String PROP_PASSWORD = "password";
+    private static final String PROP_BITRATE = "bitrate";
     private static final String PROP_BROADCASTING = "broadcasting";
     private static final String PROP_FLASH = "flashOn";
     private static final String PROP_CAMERA = "frontCamera";
@@ -83,6 +84,10 @@ public class RCTBroadcastView extends ViewGroupManager<BroadcastView>  {
     @ReactProp(name = PROP_SIZE_PRESET, defaultInt = 3)
     public void setSizePreset(BroadcastView view, int sizePreset){
         view.setSizePreset(sizePreset);
+    }
+    @ReactProp(name = PROP_BITRATE, defaultInt = 1000)
+    public void setBitrate(BroadcastView view, int bitrate){
+        view.setBitrate(bitrate);
     }
     @ReactProp(name = PROP_VIDEO_ORIENTATION)
     public void setVideoOrientation(BroadcastView view, String videoOrientation){
