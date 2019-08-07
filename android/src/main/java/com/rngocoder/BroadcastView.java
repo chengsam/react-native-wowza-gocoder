@@ -104,7 +104,7 @@ public class BroadcastView extends FrameLayout implements LifecycleEventListener
     @Override
     public void onHostResume() {
         if(broadcastConfig == null && cameraView != null) {
-            broadcastConfig = BroadcastManager.initBroadcast(localContext, getHostAddress(), getApplicationName(), getBroadcastName(), getSdkLicenseKey(), getUsername(), getPassword(), getSizePreset(), getVideoOrientation(), cameraView, audioDevice);
+            broadcastConfig = BroadcastManager.initBroadcast(localContext, getHostAddress(), getApplicationName(), getBroadcastName(), getSdkLicenseKey(), getUsername(), getPassword(), getBitrate(), getSizePreset(), getVideoOrientation(), cameraView, audioDevice);
         }
 
         if(cameraView != null){
